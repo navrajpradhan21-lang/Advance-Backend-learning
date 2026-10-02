@@ -1,0 +1,5 @@
+
+we create a docker compose file 
+to install nginx(used as load balancer)
+
+docker compose up
