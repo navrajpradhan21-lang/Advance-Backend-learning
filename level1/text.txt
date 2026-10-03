@@ -38,3 +38,15 @@ docker exec -it (container ka nam) bash
 
 //pulling
 docker run -it -e PORT=8000 -p 8000:8000 navrajpradhan/test-image 
+
+----------------------DOCKER COMPOSE---------------------------------------------
+Dockerfile ak file ko run karnay k liye hoti hai dockercompose multipull docker container ko run karne k liye hoti
+hai ..
+
+create a docker-compose.yml
+ // run the docker compose file
+
+docker compose up --build
+
+// Stop the docker file 
+docker compose down 
