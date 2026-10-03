@@ -19,3 +19,22 @@ docker run -it (image ka nam)  // this will run the container
 
 // to go inside the container
 docker exec -it (container ka nam) bash
+
+-- Create a .dockerignore file so that COPY . . doesn copy doker file 
+
+// To run the port in localhost we do port mapping
+// -p ka use kar k port mapping kar sakte hai  
+
+- docker run it -p local machine ka port : container mai jo port hai (image naem )
+-- docker run it -p 8000:5000 test-image;
+
+// Adding env variables  -e ka use kar k sare env variables dal saktae hai
+- docker run -it -e PORT = 7000 -p 7000:7000 test-image 
+
+// pushing our custom image to dockerhub
+- docker login
+- docker build -t navrajpradhan/test-image .  ( here navrajpradhan is user name )
+- docker push navrajpradhan/test-image  
+
+//pulling
+docker run -it -e PORT=8000 -p 8000:8000 navrajpradhan/test-image 
