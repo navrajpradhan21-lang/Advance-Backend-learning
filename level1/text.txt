@@ -1,0 +1,21 @@
+FROM node // pull a node image 
+
+WORKDIR /app // create a dir
+
+COPY package*.json . copy all the file staring with name package
+
+RUN npm install // install all the module
+
+COPY . .  //copy all the folder index,js etc etc 
+
+
+CMD ["node","index.js"] // run the servre
+
+
+-----------------------------DOCKER COMMAND-------------------------
+
+docker built -t (give a image name) .    // build a image of our project
+docker run -it (image ka nam)  // this will run the container
+
+// to go inside the container
+docker exec -it (container ka nam) bash
